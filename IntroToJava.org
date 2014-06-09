@@ -1,0 +1,63 @@
+#+TITLE: INTRODUCTION TO JAVA PROGRAMMING
+
+* Introduction
+
+** Intro To Java
+- Java was created by James Gosling
+
+
+** JVM
+- The Java Virtual Machine
+- Acts as the platform on which Java code runs
+- Interface between the OS and code
+- Makes Java code platform/OS independent
+
+
+** Java workflow
+- Java code written into text files
+- The Java compliler comiles this code into byte instructions which are fed to the JVM
+- The byte instructions are in .class files
+- The JVM runs the .class files
+
+
+** JRE and Java SDK
+- the JRE is the Java Runtime Environment which consists of the JVM and the core Java libraries
+- the Java SDK includes the Java compiler and other dev tools along with the JVM and core Java libraries
+
+
+** Main features of Java
+- Object Oriented
+- JVM renders it platform independent
+- Own garbage collection
+- Strongly typed language
+
+  
+** Classpath
+- Describes where the Java Compiler and JVM look for .class files to load
+- Usage of external Java libraries mandates addition of the path of these libraries to the classpath
+  
+
+* Packages, Classes and Objects
+
+** Packages
+- Are logical groupings of classes, very similar to dlls in the C# .NET world
+- Classes are assigned to packages like so:
+#+BEGIN_SRC
+    package test;
+   
+    class MyClass{ 
+     ...
+    }
+#+END_SRC
+- Help reference classes of same name. The full name of a class in a package will be 
+=<package_name>.<classname>=
+
+
+** Class
+- A class is to be contained in .java file bearing the class name.
+- A class can also be inherited by another class. The inheriting class is called the /sub-class/
+- The sub-class can be said to *extend* the /base-class/
+- A sub-class can only inherit from a single base class
+
+An example of inheritance
+
