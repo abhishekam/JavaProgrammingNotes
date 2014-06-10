@@ -51,13 +51,40 @@
 #+END_SRC
 - Help reference classes of same name. The full name of a class in a package will be 
 =<package_name>.<classname>=
-
+- The package name should reflect the directory structure under which the class source file is located.
+- Compiling a package involves compiling the classes in the pacakge directory, by running the javac from the directory above the package. So, if your source file is hello.java, and is located in SampleCode, and the hello.java is pacakged under SampleCode, to compile hello.java, you need to do
+=javac SampleCode/hello.java=
 
 ** Class
-- A class is to be contained in .java file bearing the class name.
+- A public class is to be contained in .java file bearing the class name. Hence, there can only be one public class in a .java file. However there can be multiple private classes in the .java file.
 - A class can also be inherited by another class. The inheriting class is called the /sub-class/
 - The sub-class can be said to *extend* the /base-class/
 - A sub-class can only inherit from a single base class
 
-An example of inheritance
+#+BEGIN_SRC
+-----------------------
+<file BaseHello.java>
+package SampleCode;
 
+public class BaseHello{
+
+    public void hello(){
+	System.out.println("Hello from the base class!");
+    }
+}
+
+-----------------------
+
+<file SubHello.java>
+package SampleCode;
+
+public class SubHello extends BaseHello{
+
+    @Override
+    public void hello(){
+	System.out.println("Hello from the subclass!");
+    }
+}
+#+END_SRC
+
+- The /@Override/ keyword is used to indicate that we are overriding a method from a supertype. If at all the name is changed in the baseclass, the compiler will throw an error 
